@@ -1,15 +1,219 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html class="scroll-smooth" lang="sv">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pärmar &amp; Poesi</title>
+        <link rel="icon" href="https://fav.farm/📚" />
         <link href="output.css" rel="stylesheet" />
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     </head>
-    <body>
-        <h1 class="text-3xl text-red-500"></h1>
+    <body class="text-white font-montserrat">
+        <!-- ------------ NAV ------------ -->
+        <header class="sticky w-full top-0 z-10">
+            <nav class="flex justify-between items-center bg-primary">
+                <div class="bg-secondary">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="80"
+                        height="80"
+                        viewBox="0 0 24 24"
+                        class="p-2 text-white"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M23 5v13.883l-1 .117v-16c-3.895.119-7.505.762-10.002 2.316-2.496-1.554-6.102-2.197-9.998-2.316v16l-1-.117v-13.883h-1v15h9.057c1.479 0 1.641 1 2.941 1 1.304 0 1.461-1 2.942-1h9.06v-15h-1zm-12 13.645c-1.946-.772-4.137-1.269-7-1.484v-12.051c2.352.197 4.996.675 7 1.922v11.613zm9-1.484c-2.863.215-5.054.712-7 1.484v-11.613c2.004-1.247 4.648-1.725 7-1.922v12.051z"
+                        />
+                    </svg>
+                </div>
+                <div class="nav-links hidden md:block md:static md:bg-transparent absolute bg-secondary min-h-min left-0 top-[80px] w-full">
+                    <ul class="flex md:flex-row flex-col md:justify-center md:items-center font-bold md:text-[#374046] text-white">
+                        <li class="p-3"><a href="#">BIOGRAPHIES</a></li>
+                        <li class="p-3"><a href="#newarrival">BUSINESS</a></li>
+                        <li class="p-3"><a href="#">EDUCATION</a></li>
+                        <li class="p-3"><a href="#">HISTORY</a></li>
+                        <li class="p-3"><a href="#">HISTORY</a></li>
+                        <li class="p-3"><a href="#">CLASSIC</a></li>
+                    </ul>
+                </div>
 
-        <section></section>
+                <div class="bg-white flex items-center pr-4 md:p-0 gap-2">
+                    <svg
+                        class="p-4 text-primary"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="80"
+                        height="80"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M10 20.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm6.304-17l-3.431 14h-2.102l2.541-11h-16.812l4.615 13h13.239l3.474-14h2.178l.494-2h-4.196z"
+                        />
+                    </svg>
+                    <ion-icon name="menu" class="toggle-menu-button text-3xl cursor-pointer md:hidden text-secondary"></ion-icon>
+                </div>
+            </nav>
+        </header>
+        <!-- ------------ NAV END ------------ -->
+
+        <!-- ------------ HERO ------------ -->
+        <div class="grid gap-3 text-center lg:grid-rows-3 lg:grid-cols-3">
+            <a
+                href="/"
+                class="bg-hero bg-no-repeat bg-top bg-cover aspect-video col-span-full row-span-2 grid place-content-center xl:aspect-[20/7]"
+            >
+                <ion-icon class="text-7xl mx-auto hidden md:block" name="book-outline"></ion-icon>
+                <h1 class="text-3xl font-bold lg:text-8xl">Pärmar &amp; Poesi</h1>
+                <p class="tracking-widest uppercase text-2xl lg:text-4xl">Books store</p>
+            </a>
+            <a href="/" class="bg-heroChild bg-no-repeat bg-center bg-cover aspect-video grid place-content-center lg:aspect-auto">
+                <p class="tracking-widest uppercase text-xl lg:text-2xl">Nyheter</p>
+                <h2 class="text-3xl font-bold uppercase lg:text-5xl">Barnböcker</h2>
+            </a>
+            <a href="/" class="bg-heroPocket bg-no-repeat bg-center bg-cover aspect-video grid place-content-center lg:aspect-auto">
+                <p class="tracking-widest uppercase text-xl lg:text-2xl">Nyheter</p>
+                <h2 class="text-3xl font-bold uppercase lg:text-5xl">Pocket</h2>
+            </a>
+            <a href="/" class="bg-heroDetective bg-no-repeat bg-center bg-cover aspect-video grid place-content-center lg:aspect-auto">
+                <p class="tracking-widest uppercase text-xl lg:text-2xl">Nyheter</p>
+                <h2 class="text-3xl font-bold uppercase lg:text-5xl">Deckare</h2>
+            </a>
+            <!--
+            <a class="relative group" href="">
+                <img class="group-hover:brightness-125 transition-all aspect-video lg:aspect-auto" src="./assets/heroChild.jpg" alt="" />
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <p class="tracking-widest uppercase text-xl lg:text-2xl">Nyheter</p>
+                    <h2 class="text-3xl font-bold uppercase lg:text-5xl">Deckare</h2>
+                </div>
+            </a> -->
+        </div>
+        <!-- ------------ HERO END ------------ -->
+
+        <!-- ------------ SECTION: NYHETER ------------ -->
+
+        <!-- ------------ SECTION: NYHETER SLUT ------------ -->
+
+        <!-- ------------ SECTION: KOMMANDE EVENMANG ------------ -->
+        <div id="newarrival" class="bg-secondary flex flex-col gap-16 text-center mx-auto py-14 px-4">
+            <article class="flex flex-col max-w-7xl mx-auto gap-8">
+                <h3 class="text-5xl text-primary font-bold">Kommande Evenemang</h3>
+                <p>
+                    Hos Pärmar &amp; Poesi tror vi på att skapa en gemenskap kring kärleken till böcker och läsning. Därför är du alltid
+                    välkommen att delta i våra spännande och inspirerande evenemang! Vi ordnar regelbundet författarsamtal, boksigneringar
+                    och läsecirklar där du kan möta författare, diskutera favoritböcker med andra bokälskare och få unika inblickar i
+                    berättelsernas värld. Våra evenemang är öppna för alla åldrar och intressen, och vi ser fram emot att välkomna dig till
+                    vår nästa träff. Håll koll på denna sektion för att upptäcka våra kommande evenemang och anmäl dig för en oförglömlig
+                    litterär upplevelse!
+                </p>
+            </article>
+            <div class="grid gap-20 max-w-7xl mx-auto md:grid-cols-3 md:gap-10">
+                <article class="flex flex-col gap-3">
+                    <img class="object-cover aspect-video" src="./assets/Kommande_Evenmang_1.jpg" alt="" />
+                    <h3 class="text-2xl text-primary font-bold pt-2 hover:text-white transition-all">
+                        <a href="/">Elon Musk på besök</a>
+                    </h3>
+                    <p class="md:hidden xl:block">
+                        Få en unik chans att höra en av världens mest inflytelserika entreprenörer dela med sig av sina visioner och tankar
+                        om framtidens teknologi. Elon Musk, grundare av SpaceX och Tesla, kommer till Pärmar &amp; Poesi för en exklusiv
+                        kväll med tankeväckande samtal och insikter om innovation och vetenskap.
+                    </p>
+                    <p class="flex align-center justify-center gap-3">
+                        <ion-icon class="text-primary text-2xl" name="time-outline"></ion-icon>
+                        <time datetime="2023-10-14">2023/10/14</time>
+                    </p>
+                </article>
+                <article class="flex flex-col gap-3">
+                    <img class="object-cover aspect-video" src="./assets/Kommande_Evenmang_2.jpg" alt="" />
+                    <h3 class="text-2xl text-primary font-bold pt-2 hover:text-white transition-all">
+                        <a class="" href="/">Författarträff Sören Olsson</a>
+                    </h3>
+                    <p class="md:hidden xl:block">
+                        Anslut dig till en minnesvärd kväll med den hyllade författaren Sören Olsson, en av våra mest lästa och älskade
+                        författare. Med en skrivkarriär som sträcker sig över 37 år har Olsson fängslat läsare världen över med sina böcker
+                        om Sune, Bert och många andra oförglömliga karaktärer.
+                    </p>
+                    <p class="flex align-center justify-center gap-3">
+                        <ion-icon class="text-primary text-2xl" name="time-outline"></ion-icon>
+                        <time datetime="2023-10-15">2023/10/15</time>
+                    </p>
+                </article>
+                <article class="flex flex-col gap-3">
+                    <img class="object-cover aspect-video" src="./assets/Kommande_Evenemang.jpg" alt="" />
+                    <h3 class="text-2xl text-primary font-bold pt-2 hover:text-white transition-all">
+                        <a class="" href="/">Författarkväll Camilla Läckberg</a>
+                    </h3>
+                    <p class="md:hidden xl:block">
+                        Möt Sveriges hyllade kriminalförfattare Camilla Läckberg. Utforska hennes senaste verk och fascinerande karaktärer i
+                        en kväll fylld av spänning och mysterier. En exklusiv chans att dyka in i Läckbergs värld av berättelser!
+                    </p>
+                    <p class="flex align-center justify-center gap-3">
+                        <ion-icon class="text-primary text-2xl" name="time-outline"></ion-icon>
+                        <time datetime="2023-10-17">2023/10/17</time>
+                    </p>
+                </article>
+            </div>
+        </div>
+        <!-- ------------ SECTION: KOMMANDE EVENMANG END ------------ -->
+        <!-- ------------ FOOTER ------------ -->
+        <footer class="bg-secondary">
+            <div class="max-w-7xl flex flex-col border-slate-600 border-t md:flex-row md:justify-between mx-auto">
+                <section class="flex-col m-4">
+                    <h1 class="text-2xl text-primary">Kontakt</h1>
+                    <ul class="my-2">
+                        <li class="my-2 flex flex-row items-center gap-3">
+                            <ion-icon name="mail-outline" class="w-5 h-5"> </ion-icon>
+                            <a href="mailto:parmar&poesi@gmail.com" class="hover:text-primary"> parmar&poesi@gmail.com</a>
+                        </li>
+                        <li class="my-2 flex flex-row items-center gap-3">
+                            <ion-icon name="map-outline" class="w-5 h-5"></ion-icon>
+                            <a href="#" class="hover:text-primary"> Sankt Eriksgatan 53, 112 34 Stockholm </a>
+                        </li>
+                        <li class="my-2">Öppetider: 10:00-15:00 Alla dagar</li>
+                    </ul>
+                </section>
+
+                <section class="m-4">
+                    <h1 class="text-2xl text-primary">Info</h1>
+                    <ul class="my-2">
+                        <li class="my-2 hover:text-primary"><a href="#"> Om oss</a></li>
+                        <li class="my-2 hover:text-primary"><a href="#"> Jobba med oss</a></li>
+                        <li class="my-2 hover:text-primary"><a href="#"> Copyright</a></li>
+                    </ul>
+                </section>
+
+                <section class="m-4">
+                    <h1 class="text-2xl text-primary my-2">Nyhetsbrev</h1>
+                    <div class="flex flex-row">
+                        <input type="text" class="px-3 h-12 bg-secondaryDark" name="E-post" placeholder="E-post" />
+                        <button class="w-12 h-12 bg-primary">
+                            <span>OK</span>
+                        </button>
+                    </div>
+
+                    <div class="flex flex-row mt-5">
+                        <a href="#" title="facebooklink">
+                            <ion-icon
+                                class="w-12 h-12 mr-5 hover:text-primary transition-colors duration-300"
+                                name="logo-facebook"
+                            ></ion-icon>
+                        </a>
+                        <a href="#" title="instagramlink">
+                            <ion-icon
+                                class="w-12 h-12 mr-5 hover:text-primary transition-colors duration-300"
+                                name="logo-instagram"
+                            ></ion-icon>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </footer>
+        <!-- ------------ FOOTER END ------------ -->
+
+        <script src="script.js"></script>
     </body>
 </html>
 
