@@ -21,7 +21,6 @@
 
         <link rel="icon" href="https://fav.farm/📚" />
         <link href="output.css" rel="stylesheet" />
-        <link rel="stylesheet" href="style.css" />
 
         <!-- META TAGS -->
         <meta name="title" content="Pärmar &amp; Poesi" />
@@ -32,7 +31,7 @@
         <meta name="keywords" content="konstnärliga pärmar, poesi samling, kreativt skrivande" />
         <meta name="robots" content="index, follow" />
     </head>
-    <body class="text-white font-montserrat">
+    <body class="text-white font-montserrat max-w-[]">
         <!-- ------------ NAV ------------ -->
         <header class="sticky w-full top-0 z-10">
             <nav class="flex justify-between items-center bg-primary">
@@ -106,7 +105,7 @@
         <!-- ------------ SECTION: NYHETER ------------ -->
 
         <!-- NEW ARRIVALS -->
-        <h2 id="nyheter" class="m-8 text-2xl font-semibold text-center text-teal-500 pt-5">NEW ARRIVALS</h2>
+        <h2 id="nyheter" class="scroll-mt-20 m-8 text-2xl font-semibold text-center text-teal-500 pt-5">NEW ARRIVALS</h2>
 
         <section class="swiper pb-10">
             <div class="swiper-wrapper">
@@ -116,7 +115,7 @@
                         <a href="#"> <img src="./assets/elon-musk.webp" loading="lazy" alt="Bok Elon Musk" /> </a>
                         <div class="p-5 text-center">
                             <a href="#">
-                                <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">Elon Musk</h5>
+                                <h4 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">Elon Musk</h4>
                             </a>
                             <p class="text-gray-900 mb-14">279 kr</p>
                             <a
@@ -139,9 +138,9 @@
                         </a>
                         <div class="p-5 text-center">
                             <a href="#">
-                                <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">
+                                <h4 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">
                                     Ta makten över din hälsa på 12 veckor
-                                </h5>
+                                </h4>
                             </a>
                             <p class="text-gray-900 mb-14">249 kr</p>
                             <a
@@ -161,7 +160,7 @@
                         </a>
                         <div class="p-5 text-center">
                             <a href="#">
-                                <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">Kostens Kraft</h5>
+                                <h4 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">Kostens Kraft</h4>
                             </a>
                             <p class="text-gray-900 mb-14">259 kr</p>
                             <a
@@ -185,7 +184,7 @@
                         </a>
                         <div class="p-5 text-center">
                             <a href="#">
-                                <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">Sju verktyg för livet</h5>
+                                <h4 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">Sju verktyg för livet</h4>
                             </a>
                             <p class="text-gray-900 mb-14">279 kr</p>
                             <a
@@ -209,7 +208,7 @@
                         </a>
                         <div class="p-5 text-center">
                             <a href="#">
-                                <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">Jahan Falk. Slutet var bara början</h5>
+                                <h4 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">Jahan Falk. Slutet var bara början</h4>
                             </a>
                             <p class="text-gray-900 mb-14">269 kr</p>
                             <a
@@ -233,9 +232,9 @@
                         </a>
                         <div class="p-5 text-center">
                             <a href="#">
-                                <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">
+                                <h4 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">
                                     Regnmakarna - Ett Slags Dagböcker 1992-2001
-                                </h5>
+                                </h4>
                             </a>
                             <p class="text-gray-900 mb-14">299 kr</p>
                             <a
@@ -256,31 +255,7 @@
 
         <!-- ------------ SECTION: NYHETER SLUT ------------ -->
 
-        <!-- -------------SECTION: Nyhetsbrev-------------------- -->
-
-        <section class="py-14 bg-primary">
-            <div class="p-8 mx-auto max-w-7xl flex flex-col items-center">
-                <h3 class="text-secondary text-3xl mb-4 font-bold">Anmäl dig till vårt nyhetsbrev</h3>
-                <div class="text-secondary max-w-2xl">
-                    <p class="text-lg text-center">
-                        Håll dig uppdaterad med färdplanens framsteg, meddelanden och exklusiva rabatter, registrera dig gärna med din
-                        e-post.
-                    </p>
-                    <form class="w-full flex items-center mt-5 gap-1 flex-col sm:flex-row">
-                        <input
-                            type="email"
-                            placeholder="Ange ditt e-post address..."
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                            class="flex-1 p-3 outline-none rounded-sm invalid:border-red-500 border-2"
-                        />
-                        <button type="submit" class="bg-secondary text-white p-3">Prenumerera</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- ------------ SECTION: KOMMANDE EVENMANG ------------ -->
-        <div id="evenemang" class="bg-secondary flex flex-col gap-16 text-center mx-auto py-14 px-4">
+        <div id="evenemang" class="bg-secondary flex flex-col gap-16 text-center mx-auto py-14 px-4 scroll-mt-20">
             <article class="flex flex-col max-w-7xl mx-auto gap-8">
                 <h3 class="text-5xl text-primary font-bold">Kommande Evenemang</h3>
                 <p>
@@ -355,6 +330,30 @@
             </div>
         </div>
         <!-- ------------ SECTION: KOMMANDE EVENMANG END ------------ -->
+        <!-- -------------SECTION: Nyhetsbrev-------------------- -->
+
+        <section class="py-14 bg-primary">
+            <div class="p-8 mx-auto max-w-7xl flex flex-col items-center">
+                <h3 class="text-secondary text-3xl mb-4 font-bold">Anmäl dig till vårt nyhetsbrev</h3>
+                <div class="text-secondary max-w-2xl">
+                    <p class="text-lg text-center">
+                        Håll dig uppdaterad med färdplanens framsteg, meddelanden och exklusiva rabatter, registrera dig gärna med din
+                        e-post.
+                    </p>
+                    <form class="w-full flex items-center mt-5 gap-1 flex-col sm:flex-row">
+                        <input
+                            type="email"
+                            placeholder="Ange ditt e-post address..."
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            class="flex-1 p-3 outline-none rounded-sm invalid:border-red-500 border-2"
+                        />
+                        <button type="submit" class="bg-secondary text-white p-3">Prenumerera</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------------ SECTION: KOMMANDE EVENMANG ------------ -->
         <!-- ------------ FOOTER ------------ -->
         <footer id="kontakt" class="bg-secondary">
             <div class="max-w-7xl flex flex-col border-slate-600 border-t md:flex-row md:justify-between mx-auto">
@@ -378,7 +377,7 @@
                     <ul class="my-2">
                         <li class="my-2 hover:text-primary"><a href="#"> Om oss</a></li>
                         <li class="my-2 hover:text-primary"><a href="#"> Jobba med oss</a></li>
-                        <li class="my-2"><p>Copyright &copy;</p></li>
+                        <li class="my-2"><p>Copyright &copy; 2023</p></li>
                     </ul>
                 </section>
 
@@ -392,16 +391,28 @@
                     </div>
 
                     <div class="flex flex-row mt-5">
-                        <a href="#" title="facebooklink">
+                        <a target="_blank" rel="noopener" href="https://www.facebook.com/" title="facebooklink">
                             <ion-icon
                                 class="w-12 h-12 mr-5 hover:text-primary transition-colors duration-300"
                                 name="logo-facebook"
                             ></ion-icon>
                         </a>
-                        <a href="#" title="instagramlink">
+                        <a target="_blank" rel="noopener" href="https://www.instagram.com/" title="instagramlink">
                             <ion-icon
                                 class="w-12 h-12 mr-5 hover:text-primary transition-colors duration-300"
                                 name="logo-instagram"
+                            ></ion-icon>
+                        </a>
+                        <a target="_blank" rel="noopener" href="https://www.youtube.com/" title="youtubelink">
+                            <ion-icon
+                                class="w-12 h-12 mr-5 hover:text-primary transition-colors duration-300"
+                                name="logo-twitter"
+                            ></ion-icon>
+                        </a>
+                        <a target="_blank" rel="noopener" href="https://www.linkedin.com/" title="linkedinlink">
+                            <ion-icon
+                                class="w-12 h-12 mr-5 hover:text-primary transition-colors duration-300"
+                                name="logo-linkedin"
                             ></ion-icon>
                         </a>
                     </div>
@@ -426,6 +437,9 @@
 
                 // Breakpoints for responsive design
                 breakpoints: {
+                    1800: {
+                        slidesPerView: 6, // Number of cards visible on screens bigger than 1120px wide
+                    },
                     1120: {
                         slidesPerView: 4, // Number of cards visible on screens bigger than 1120px wide
                     },
