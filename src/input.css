@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-links .nav-link {
+    transition: all 0.5s;
+}
+.nav-links .nav-link:hover {
+    color: #ffffff;
+}
+
+/********************** Swiper ******************/
+.swiper {
+    width: 100%;
+}
+.swiper .add-to-cart-btn {
+    position: absolute;
+    bottom: 1rem;
+    width: 170px !important;
+    right: calc(50% - 85px);
+}
+
+.swiper-pagination {
+    position: initial;
+    margin-top: 1rem;
+}
+.swiper-pagination .swiper-pagination-bullet {
+    width: 0.8rem !important;
+    height: 0.8rem !important;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: rgb(88, 189, 171) !important;
+}
+
+@media screen and (max-width: 992px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 320px) {
+    .card {
+        width: 16rem;
+    }
+}
+/********************** News letter form ******************/
+.newsletter-form button {
+    transition: all 0.5s;
+}
+.newsletter-form button:hover {
+    filter: brightness(1.5);
+}
+
+/*# sourceMappingURL=input.css.map */

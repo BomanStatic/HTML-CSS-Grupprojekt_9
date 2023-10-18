@@ -4,13 +4,33 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pärmar &amp; Poesi</title>
-        <link rel="icon" href="https://fav.farm/📚" />
-        <link href="output.css" rel="stylesheet" />
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <!-- ionicons SJ -->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <!-- Custom JS -->
+        <script src="script.js" defer></script>
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+        <link rel="icon" href="https://fav.farm/📚" />
+        <link href="output.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- META TAGS -->
+        <meta name="title" content="Pärmar &amp; Poesi" />
+        <meta
+            name="description"
+            content="Utforska vårt sortiment av vackra pärmar och inspirerande poesi. Hitta den perfekta kombinationen av konst och ord för dina kreativa äventyr."
+        />
+        <meta name="keywords" content="konstnärliga pärmar, poesi samling, kreativt skrivande" />
+        <meta name="robots" content="index, follow" />
     </head>
     <body class="text-white font-montserrat">
         <!-- ------------ NAV ------------ -->
@@ -32,10 +52,10 @@
                 </div>
                 <div class="nav-links hidden md:block md:static md:bg-transparent absolute bg-secondary min-h-min left-0 top-[80px] w-full">
                     <ul class="flex md:flex-row flex-col md:justify-center md:items-center font-bold md:text-[#374046] text-white">
-                        <li class="p-3"><a href="#home">Home</a></li>
-                        <li class="p-3"><a href="#nyheter">Nyheter</a></li>
-                        <li class="p-3"><a href="#evenemang">Evenemang</a></li>
-                        <li class="p-3"><a href="#kontakt">Kontakt</a></li>
+                        <li class="nav-link p-3"><a href="#home">Home</a></li>
+                        <li class="nav-link p-3"><a href="#nyheter">Nyheter</a></li>
+                        <li class="nav-link p-3"><a href="#evenemang">Evenemang</a></li>
+                        <li class="nav-link p-3"><a href="#kontakt">Kontakt</a></li>
                     </ul>
                 </div>
 
@@ -59,44 +79,208 @@
         <!-- ------------ NAV END ------------ -->
 
         <!-- ------------ HERO ------------ -->
-        <div class="grid gap-3 text-center lg:grid-rows-3 lg:grid-cols-3">
+        <div id="home" class="grid gap-3 text-center lg:grid-rows-3 lg:grid-cols-3">
             <a
-                href="/"
+                href="#"
                 class="bg-hero bg-no-repeat bg-top bg-cover aspect-video col-span-full row-span-2 grid place-content-center xl:aspect-[20/7]"
             >
                 <ion-icon class="text-7xl mx-auto hidden md:block" name="book-outline"></ion-icon>
                 <h1 class="text-3xl font-bold lg:text-8xl">Pärmar &amp; Poesi</h1>
                 <p class="tracking-widest uppercase text-2xl lg:text-4xl">Books store</p>
             </a>
-            <a href="/" class="bg-heroChild bg-no-repeat bg-center bg-cover aspect-video grid place-content-center lg:aspect-auto">
+            <a href="#" class="bg-heroChild bg-no-repeat bg-center bg-cover aspect-video grid place-content-center lg:aspect-auto">
                 <p class="tracking-widest uppercase text-xl lg:text-2xl">Nyheter</p>
                 <h2 class="text-3xl font-bold uppercase lg:text-5xl">Barnböcker</h2>
             </a>
-            <a href="/" class="bg-heroPocket bg-no-repeat bg-center bg-cover aspect-video grid place-content-center lg:aspect-auto">
+            <a href="#" class="bg-heroPocket bg-no-repeat bg-center bg-cover aspect-video grid place-content-center lg:aspect-auto">
                 <p class="tracking-widest uppercase text-xl lg:text-2xl">Nyheter</p>
                 <h2 class="text-3xl font-bold uppercase lg:text-5xl">Pocket</h2>
             </a>
-            <a href="/" class="bg-heroDetective bg-no-repeat bg-center bg-cover aspect-video grid place-content-center lg:aspect-auto">
+            <a href="#" class="bg-heroDetective bg-no-repeat bg-center bg-cover aspect-video grid place-content-center lg:aspect-auto">
                 <p class="tracking-widest uppercase text-xl lg:text-2xl">Nyheter</p>
                 <h2 class="text-3xl font-bold uppercase lg:text-5xl">Deckare</h2>
             </a>
-            <!--
-            <a class="relative group" href="">
-                <img class="group-hover:brightness-125 transition-all aspect-video lg:aspect-auto" src="./assets/heroChild.jpg" alt="" />
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <p class="tracking-widest uppercase text-xl lg:text-2xl">Nyheter</p>
-                    <h2 class="text-3xl font-bold uppercase lg:text-5xl">Deckare</h2>
-                </div>
-            </a> -->
         </div>
         <!-- ------------ HERO END ------------ -->
 
         <!-- ------------ SECTION: NYHETER ------------ -->
 
+        <!-- NEW ARRIVALS -->
+        <h2 id="nyheter" class="m-8 text-2xl font-semibold text-center text-teal-500 pt-5">NEW ARRIVALS</h2>
+
+        <section class="swiper pb-10">
+            <div class="swiper-wrapper">
+                <!-- BOOK 1 -->
+                <div class="swiper-slide h-auto flex justify-center items-center">
+                    <div class="bg-white border border-gray-200 shadow lg:w-64 md:w-60 sm:w-64 p-2 h-full">
+                        <a href="#"> <img src="./assets/elon-musk.webp" loading="lazy" alt="Bok Elon Musk" /> </a>
+                        <div class="p-5 text-center">
+                            <a href="#">
+                                <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">Elon Musk</h5>
+                            </a>
+                            <p class="text-gray-900 mb-14">279 kr</p>
+                            <a
+                                href="#"
+                                class="inline-flex items-center p-4 text-sm font-medium text-center text-white add-to-cart-btn bg-primary border border-primary hover:bg-white hover:text-primary"
+                            >
+                                LÄGG I VARUKORG
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- BOOK 2 -->
+                <div class="swiper-slide h-auto flex justify-center items-center">
+                    <div class="bg-white border border-gray-200 shadow lg:w-64 md:w-60 sm:w-64 p-2 h-full">
+                        <a href="#">
+                            <img
+                                src="./assets/ta-makten-over-din-halsa-pa-12-veckor.webp"
+                                alt="Bok Ta makten-över din hälsa på 12 veckor"
+                            />
+                        </a>
+                        <div class="p-5 text-center">
+                            <a href="#">
+                                <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">
+                                    Ta makten över din hälsa på 12 veckor
+                                </h5>
+                            </a>
+                            <p class="text-gray-900 mb-14">249 kr</p>
+                            <a
+                                href="#"
+                                class="inline-flex items-center p-4 text-sm font-medium text-center text-white add-to-cart-btn bg-primary border border-primary hover:bg-white hover:text-primary"
+                            >
+                                LÄGG I VARUKORG
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- BOOK 3 -->
+                <div class="swiper-slide h-auto flex justify-center items-center">
+                    <div class="bg-white border border-gray-200 shadow lg:w-64 md:w-60 sm:w-64 p-2 h-full">
+                        <a href="#">
+                            <img src="./assets/kostens-krav.webp" loading="lazy" alt="Bok Kostens krav" />
+                        </a>
+                        <div class="p-5 text-center">
+                            <a href="#">
+                                <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">Kostens Kraft</h5>
+                            </a>
+                            <p class="text-gray-900 mb-14">259 kr</p>
+                            <a
+                                href="#"
+                                class="inline-flex items-center p-4 text-sm font-medium text-center text-white add-to-cart-btn bg-primary border border-primary hover:bg-white hover:text-primary"
+                            >
+                                LÄGG I VARUKORG
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- BOOK 4 -->
+                <div class="swiper-slide h-auto flex justify-center items-center">
+                    <div class="bg-white border border-gray-200 shadow lg:w-64 md:w-60 sm:w-64 p-2 h-full">
+                        <a href="#">
+                            <img
+                                src="./assets/gor-nytta-sju-verktyg-for-livet.webp"
+                                loading="lazy"
+                                alt="Bok Gör nytta : Sju verktyg för livet"
+                            />
+                        </a>
+                        <div class="p-5 text-center">
+                            <a href="#">
+                                <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">Sju verktyg för livet</h5>
+                            </a>
+                            <p class="text-gray-900 mb-14">279 kr</p>
+                            <a
+                                href="#"
+                                class="inline-flex items-center p-4 text-sm font-medium text-center text-white add-to-cart-btn bg-primary border border-primary hover:bg-white hover:text-primary"
+                            >
+                                LÄGG I VARUKORG
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- BOOK 5 -->
+                <div class="swiper-slide h-auto flex justify-center items-center">
+                    <div class="bg-white border border-gray-200 shadow lg:w-64 md:w-60 sm:w-64 p-2 h-full">
+                        <a href="#">
+                            <img
+                                src="./assets/johan-falk-slutet-var-bara-borjan.webp"
+                                loading="lazy"
+                                alt="Bok Johan Falk - Slutet var bara början"
+                            />
+                        </a>
+                        <div class="p-5 text-center">
+                            <a href="#">
+                                <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">Jahan Falk. Slutet var bara början</h5>
+                            </a>
+                            <p class="text-gray-900 mb-14">269 kr</p>
+                            <a
+                                href="#"
+                                class="inline-flex items-center p-4 text-sm font-medium text-center text-white add-to-cart-btn bg-primary border border-primary hover:bg-white hover:text-primary"
+                            >
+                                LÄGG I VARUKORG
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- BOOK 6 -->
+                <div class="swiper-slide h-auto flex justify-center items-center">
+                    <div class="bg-white border border-gray-200 shadow lg:w-64 md:w-60 sm:w-64 p-2 h-full">
+                        <a href="#">
+                            <img
+                                src="./assets/regnmakarna-ett-slags-dagbocker-1992-2001.webp"
+                                alt="Bok Regnmakarna - Ett Slags Dagböcker 1992-2001"
+                                loading="lazy"
+                            />
+                        </a>
+                        <div class="p-5 text-center">
+                            <a href="#">
+                                <h5 class="mb-2 text-lg font-semibold tracking-tight text-gray-900">
+                                    Regnmakarna - Ett Slags Dagböcker 1992-2001
+                                </h5>
+                            </a>
+                            <p class="text-gray-900 mb-14">299 kr</p>
+                            <a
+                                href="#"
+                                class="inline-flex items-center p-4 text-sm font-medium text-center text-white add-to-cart-btn bg-primary border border-primary hover:bg-white"
+                            >
+                                LÄGG I VARUKORG
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev text-primary"></div>
+            <div class="swiper-button-next text-primary"></div>
+        </section>
+
         <!-- ------------ SECTION: NYHETER SLUT ------------ -->
 
+        <!-- -------------SECTION: Nyhetsbrev-------------------- -->
+
+        <section class="py-14 bg-primary">
+            <div class="p-8 mx-auto max-w-7xl flex flex-col items-center">
+                <h3 class="text-secondary text-3xl mb-4 font-bold">Anmäl dig till vårt nyhetsbrev</h3>
+                <div class="text-secondary max-w-2xl">
+                    <p class="text-lg text-center">
+                        Håll dig uppdaterad med färdplanens framsteg, meddelanden och exklusiva rabatter, registrera dig gärna med din
+                        e-post.
+                    </p>
+                    <form class="w-full flex items-center mt-5 gap-1 flex-col sm:flex-row">
+                        <input
+                            type="email"
+                            placeholder="Ange ditt e-post address..."
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            class="flex-1 p-3 outline-none rounded-sm invalid:border-red-500 border-2"
+                        />
+                        <button type="submit" class="bg-secondary text-white p-3">Prenumerera</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- ------------ SECTION: KOMMANDE EVENMANG ------------ -->
-        <div id="newarrival" class="bg-secondary flex flex-col gap-16 text-center mx-auto py-14 px-4">
+        <div id="evenemang" class="bg-secondary flex flex-col gap-16 text-center mx-auto py-14 px-4">
             <article class="flex flex-col max-w-7xl mx-auto gap-8">
                 <h3 class="text-5xl text-primary font-bold">Kommande Evenemang</h3>
                 <p>
@@ -110,7 +294,12 @@
             </article>
             <div class="grid gap-20 max-w-7xl mx-auto md:grid-cols-3 md:gap-10">
                 <article class="flex flex-col gap-3">
-                    <img class="object-cover aspect-video" src="./assets/Kommande_Evenmang_1.jpg" alt="" />
+                    <img
+                        class="object-cover aspect-video"
+                        src="./assets/Kommande_Evenmang_1.webp"
+                        loading="lazy"
+                        alt="En man som är glad att prata om böcker"
+                    />
                     <h3 class="text-2xl text-primary font-bold pt-2 hover:text-white transition-all">
                         <a href="/">Elon Musk på besök</a>
                     </h3>
@@ -125,9 +314,14 @@
                     </p>
                 </article>
                 <article class="flex flex-col gap-3">
-                    <img class="object-cover aspect-video" src="./assets/Kommande_Evenmang_2.jpg" alt="" />
+                    <img
+                        class="object-cover aspect-video"
+                        src="./assets/Kommande_Evenmang_2.webp"
+                        loading="lazy"
+                        alt="En far och son som lyssnar på något spännande"
+                    />
                     <h3 class="text-2xl text-primary font-bold pt-2 hover:text-white transition-all">
-                        <a class="" href="/">Författarträff Sören Olsson</a>
+                        <a href="/">Författarträff Sören Olsson</a>
                     </h3>
                     <p class="md:hidden xl:block">
                         Anslut dig till en minnesvärd kväll med den hyllade författaren Sören Olsson, en av våra mest lästa och älskade
@@ -140,9 +334,14 @@
                     </p>
                 </article>
                 <article class="flex flex-col gap-3">
-                    <img class="object-cover aspect-video" src="./assets/Kommande_Evenemang.jpg" alt="" />
+                    <img
+                        class="object-cover aspect-video"
+                        src="./assets/Kommande_Evenemang.webp"
+                        loading="lazy"
+                        alt="En kvinna som lyfter massor av böcker"
+                    />
                     <h3 class="text-2xl text-primary font-bold pt-2 hover:text-white transition-all">
-                        <a class="" href="/">Författarkväll Camilla Läckberg</a>
+                        <a href="/">Författarkväll Camilla Läckberg</a>
                     </h3>
                     <p class="md:hidden xl:block">
                         Möt Sveriges hyllade kriminalförfattare Camilla Läckberg. Utforska hennes senaste verk och fascinerande karaktärer i
@@ -157,10 +356,10 @@
         </div>
         <!-- ------------ SECTION: KOMMANDE EVENMANG END ------------ -->
         <!-- ------------ FOOTER ------------ -->
-        <footer class="bg-secondary">
+        <footer id="kontakt" class="bg-secondary">
             <div class="max-w-7xl flex flex-col border-slate-600 border-t md:flex-row md:justify-between mx-auto">
                 <section class="flex-col m-4">
-                    <h1 class="text-2xl text-primary">Kontakt</h1>
+                    <h2 class="text-2xl text-primary">Kontakt</h2>
                     <ul class="my-2">
                         <li class="my-2 flex flex-row items-center gap-3">
                             <ion-icon name="mail-outline" class="w-5 h-5"> </ion-icon>
@@ -175,20 +374,20 @@
                 </section>
 
                 <section class="m-4">
-                    <h1 class="text-2xl text-primary">Info</h1>
+                    <h2 class="text-2xl text-primary">Info</h2>
                     <ul class="my-2">
                         <li class="my-2 hover:text-primary"><a href="#"> Om oss</a></li>
                         <li class="my-2 hover:text-primary"><a href="#"> Jobba med oss</a></li>
-                        <li class="my-2 hover:text-primary"><a href="#"> Copyright</a></li>
+                        <li class="my-2"><p>Copyright &copy;</p></li>
                     </ul>
                 </section>
 
                 <section class="m-4">
-                    <h1 class="text-2xl text-primary my-2">Nyhetsbrev</h1>
+                    <h2 class="text-2xl text-primary my-2">Nyhetsbrev</h2>
                     <div class="flex flex-row">
                         <input type="text" class="px-3 h-12 bg-secondaryDark" name="E-post" placeholder="E-post" />
                         <button class="w-12 h-12 bg-primary">
-                            <span>OK</span>
+                            <span class="text-secondaryDark font-bold">OK</span>
                         </button>
                     </div>
 
@@ -210,8 +409,35 @@
             </div>
         </footer>
         <!-- ------------ FOOTER END ------------ -->
+        <script>
+            var swiper = new Swiper(".swiper", {
+                // Pagination
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                // Navigation arrows
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
 
-        <script src="script.js"></script>
+                slidesPerView: 1, // Number of cards visible on small screens
+                spaceBetween: 0, // Space between cards
+
+                // Breakpoints for responsive design
+                breakpoints: {
+                    1120: {
+                        slidesPerView: 4, // Number of cards visible on screens bigger than 1120px wide
+                    },
+                    768: {
+                        slidesPerView: 3, // Number of cards visible on screens bigger than 768px wide
+                    },
+                    576: {
+                        slidesPerView: 2, // Number of cards visible on screens bigger than 576px wide
+                    },
+                },
+            });
+        </script>
     </body>
 </html>
 

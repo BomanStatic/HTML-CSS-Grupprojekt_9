@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$transition: all 0.5s;
+$hover-color: #ffffff;
+
+.nav-links {
+    .nav-link {
+        transition: $transition;
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}
+/********************** Swiper ******************/
+
+.swiper {
+    width: 100%;
+    .add-to-cart-btn {
+        position: absolute;
+        bottom: 1rem;
+        width: 170px !important ;
+        right: calc(50% - 85px);
+    }
+}
+
+.swiper-pagination {
+    position: initial;
+    margin-top: 1rem;
+    .swiper-pagination-bullet {
+        width: 0.8rem !important;
+        height: 0.8rem !important;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: rgb(88, 189, 171) !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 320px) {
+    .card {
+        width: 16rem;
+    }
+}
+
+/********************** News letter form ******************/
+
+.newsletter-form {
+    button {
+        transition: $transition;
+        &:hover {
+            filter: brightness(1.5);
+        }
+    }
+}
